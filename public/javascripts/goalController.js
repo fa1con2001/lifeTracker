@@ -4,7 +4,7 @@ angular.module('goalController', [])
     for (var i=0;i<data.length; i++) {
       data[i].ok = i;
       data[i].ko = 1;
-      data[i].percentatge = (data[i].ok/(data[i].ok+data[i].ko))*100;
+      data[i].percentage = (data[i].ok/(data[i].ok+data[i].ko))*100;
     }
     $scope.goals = data;
   });
@@ -12,9 +12,10 @@ angular.module('goalController', [])
     if(!$scope.goalName || $scope.goalName === '') { return; }
     var goalObject = {
       description: $scope.goalName
-    };
+     }
     Goals.create(goalObject).success(function(data) {
       goalObject._id=data._id;
+      goalObject.percentage = 0;
       $scope.goals.push(goalObject);
       $scope.goalName = '';
     });
