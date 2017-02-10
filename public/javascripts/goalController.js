@@ -7,7 +7,24 @@ angular.module('goalController', [])
       data[i].percentage = (data[i].ok/(data[i].ok+data[i].ko))*100;
     }
     $scope.goals = data;
+    $scope.days = [
+      {
+        date: "hola",
+        type: "hol"
+      },
+      {
+        date: "hoy",
+        type: "guay"
+      }
+    ];
   });
+  $scope.addDay = function () {
+    var dayObject = {
+      date: "algo",
+      type: "otro algo"
+    };
+    $scope.days.push(dayObject);
+  };
   $scope.addGoal = function() {
     if(!$scope.goalName || $scope.goalName === '') { return; }
     var goalObject = {
