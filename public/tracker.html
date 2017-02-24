@@ -45,32 +45,36 @@
         <tr>
           <th>Data</th>
           <th>Tipo</th>
+          <th>Ambiente</th>
         </tr>
         <tr ng-repeat="day in days">
           <td>{{day.date}}</td>
           <td>{{day.type}}</td>
+          <td></td>
         </tr>
       </table>
-      Inputs (date y type)
 
-      <div ng-repeat="goal in goals" class="form-group row form-row">
-        <div class="col-xs-1">
-        </div>
-        <div class="col-xs-10 goal">{{goal.description}}:{{goal.percentage}}%</div>
-        <div class="col-xs-1">
-          <div class="pull-right">
-            <label class="btn btn-danger">
-              <span class="glyphicon glyphicon-trash" aria-hidden="true" ng-click="removeGoal(goal)"></span>
-            </label>
-          </div>
-        </div>
-      </div>
-      <form ng-submit="addGoal()">
+      <form ng-submit="addDate()">
         <div class="row form-row">
-          <div class="col-xs-10 col-xs-offset-1 goal">
-            <input type="text" ng-model="goalName" class="form-control" placeholder="New goal"/>
+          <div class="col-xs-3">
+            <input type="date" ng-model="newDate" class="form-control" placeholder=""/>
           </div>
-          <div class="col-xs-1">
+          <div class="col-xs-3">
+            <select ng-model="test">
+              <option value="skift">Skift</option>
+              <option value="plantxa">Plantxa</option>
+              <option value="iola">Iola</option>
+              <option value="2skift">2 Skift</option>
+            </select>
+          </div>
+          <div class="col-xs-5">
+          </div>
+          <select ng-model="test2">
+            <option value="Agua">Agua</option>
+            <option value="Gim">Gim</option>
+            <option value="Regata">Regata</option>
+          </select>
+          <div class="col-xs-7">
             <div class="pull-right">
               <button type="submit" class="btn btn-success">
                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>

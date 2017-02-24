@@ -9,19 +9,19 @@ angular.module('goalController', [])
     $scope.goals = data;
     $scope.days = [
       {
-        date: "hola",
-        type: "hol"
+        date: "21/05/17",
+        type: "gu"
       },
       {
-        date: "hoy",
+        date: "21/07/18",
         type: "guay"
       }
     ];
   });
-  $scope.addDay = function () {
+  $scope.addDate = function () {
     var dayObject = {
-      date: "algo",
-      type: "otro algo"
+      date: $scope.newDate,
+      type: $scope.test
     };
     $scope.days.push(dayObject);
   };
