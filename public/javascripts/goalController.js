@@ -10,7 +10,8 @@ angular.module('goalController', [])
     $scope.days = [
       {
         date: "21/05/17",
-        type: "gu"
+        type: "gu",
+        ambiente: "bla"
       },
       {
         date: "21/07/18",
@@ -19,9 +20,10 @@ angular.module('goalController', [])
     ];
   });
   $scope.addDate = function () {
-    var dayObject = {
-      date: $scope.newDate,
-      type: $scope.test
+   var dayObject = {
+     date: $scope.newDate,
+     type: $scope.test,
+     ambiente: $scope.test2
     };
     $scope.days.push(dayObject);
   };
@@ -32,7 +34,6 @@ angular.module('goalController', [])
      }
     Goals.create(goalObject).success(function(data) {
       goalObject._id=data._id;
-      goalObject.percentage = 0;
       $scope.goals.push(goalObject);
       $scope.goalName = '';
     });

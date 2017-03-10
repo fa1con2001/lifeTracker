@@ -43,14 +43,14 @@
 
       <table class="table">
         <tr>
-          <th>Data</th>
+          <th>Fecha</th>
           <th>Tipo</th>
           <th>Ambiente</th>
         </tr>
         <tr ng-repeat="day in days">
           <td>{{day.date}}</td>
           <td>{{day.type}}</td>
-          <td></td>
+          <td>{{day.ambiente}}</td>
         </tr>
       </table>
 
@@ -65,6 +65,9 @@
               <option value="plantxa">Plantxa</option>
               <option value="iola">Iola</option>
               <option value="2skift">2 Skift</option>
+              <option value="test ergo">Test ergo</option>
+              <option value="ocho">Ocho</option>
+              <option value="4 iola">4 Iola</option>
             </select>
           </div>
           <div class="col-xs-5">
@@ -87,7 +90,7 @@
 
     <hr>
     <footer>
-      <p>&copy; 2017 SEK Catalunya</p>
+      <p>&copy; 2016-2017 R.C.Marítim Barcelona club de Rem</p>
     </footer>
   </div> <!-- /container -->
 
