@@ -26,9 +26,15 @@
       <div id="navbar" class="navbar-collapse navbar-right collapse">
         <ul class="nav navbar-nav">
           <li><a href="index.html">Home</a></li>
+<<<<<<< HEAD
           <li class="active"><a href="#">Goals</a></li>
           <li><a href="tracker.html">Track</a></li>
           <li><a href="#contact">Analyse</a></li>
+=======
+          <li ><a href="goals.html">Goals</a></li>
+          <li class="active"><a href="#">Track</a></li>
+          <li><a href="analyse.html">Analyse</a></li>
+>>>>>>> profjesus/myTracker
         </ul>
       </div><!--/.nav-collapse -->
     </div>
@@ -37,6 +43,7 @@
     <div class="form-horizontal tracker-form">
       <div class="row tracker-heading">
         <div class="col-md-6 col-md-offset-3">
+<<<<<<< HEAD
           <h2 align="center">Registro</h2>
         </div>
       </div>
@@ -86,11 +93,41 @@
           </div>
         </div>
       </form>
+=======
+          <h2>My goals</h2>
+        </div>
+        <div class="col-md-2 col-md-offset-1">
+          <label for="currentDay">Date: </label>
+          <input type="date" id="currentDay" ng-model="day" ng-change="loadDay(day, goals)"/>
+        </div>
+      </div>
+      <div ng-repeat="goal in goals" class="form-group row form-row">
+        <div class="col-xs-8 col-xs-offset-1 goal">{{goal.description}}</div>
+        <div class="col-xs-1">
+          <div class="pull-right">
+            <label class="btn btn-success" ng-class="{'sel': goal.result==1}">
+              <span class="glyphicon glyphicon-ok" aria-hidden="true" ng-click="addOk(goal)"></span>
+            </label>
+          </div>
+        </div>
+        <div class="col-xs-1">
+          <div class="pull-right">
+            <label class="btn btn-danger"  ng-class="{'sel': goal.result==-1}">
+              <span class="glyphicon glyphicon-remove" aria-hidden="true" ng-click="addKo(goal)"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+>>>>>>> profjesus/myTracker
     </div>
 
     <hr>
     <footer>
+<<<<<<< HEAD
       <p>&copy; 2016-2017 R.C.Marítim Barcelona club de Rem</p>
+=======
+      <p>&copy; 2017 SEK Catalunya</p>
+>>>>>>> profjesus/myTracker
     </footer>
   </div> <!-- /container -->
 
