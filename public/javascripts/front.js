@@ -1,1 +1,1 @@
-var app = angular.module('laag', ['goalController', 'goalService']);
+var app = angular.module('laag', ['trainingController', 'trainingService']);

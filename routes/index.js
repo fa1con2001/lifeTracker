@@ -74,7 +74,7 @@ function getOrCreateDay(date, callback){
   });
 }*/
 
-router.delete('/training/:training', function(req, res, next) {
+router.delete('/trainings/:training', function(req, res, next) {
   Training.remove({_id: req.training._id}, function (err) {
     if (err) { return next(err); }
     res.sendStatus(204);
